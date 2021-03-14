@@ -1,0 +1,78 @@
+﻿<Page x:Class="genshinsim.CharCreate"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:genshinsim"
+      
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+
+      mc:Ignorable="d"       
+      d:DesignHeight="450" d:DesignWidth="800"     
+      Title="CharCreate" Width="572" Height="376">
+
+    <Grid>
+        <Button x:Name="btn_save" Content="Save" HorizontalAlignment="Left" Margin="487,334,0,0" VerticalAlignment="Top" Width="75" Click="btn_save_Click"/>
+        <ComboBox x:Name="cb_char" HorizontalAlignment="Left" Margin="72,13,0,0" VerticalAlignment="Top" Width="100" Height="26">
+            <ListBoxItem Content="Albedo"/>
+            <ListBoxItem Content="Amber"/>
+            <ListBoxItem Content="Barbara"/>
+            <ListBoxItem Content="Beidou"/>
+            <ListBoxItem Content="Bennett"/>
+            <ListBoxItem Content="Chongyun"/>
+            <ListBoxItem Content="Diluc"/>
+            <ListBoxItem Content="Diona"/>
+            <ListBoxItem Content="Fischl"/>
+            <ListBoxItem Content="Ganyu"/>
+            <ListBoxItem Content="Jean"/>
+            <ListBoxItem Content="Kaeya"/>
+            <ListBoxItem Content="Keqing"/>
+            <ListBoxItem Content="Klee"/>
+            <ListBoxItem Content="Lisa"/>
+            <ListBoxItem Content="Mona"/>
+            <ListBoxItem Content="Ningguang"/>
+            <ListBoxItem Content="Noelle"/>
+            <ListBoxItem Content="Qiqi"/>
+            <ListBoxItem Content="Razor"/>
+            <ListBoxItem Content="Sucrose"/>
+            <ListBoxItem Content="Tartaglia"/>
+            <ListBoxItem Content="Traveler"/>
+            <ListBoxItem Content="Venti"/>
+            <ListBoxItem Content="Xiangling"/>
+            <ListBoxItem Content="Xiao"/>
+            <ListBoxItem Content="Xingqiu"/>
+            <ListBoxItem Content="Xinyan"/>
+            <ListBoxItem Content="Zhongli"/>
+            <ListBoxItem Content="Ayaka(Unreleased)"/>
+            <ListBoxItem Content="Rosaria(Unreleased)"/>
+        </ComboBox>
+        <Label Content="Character" HorizontalAlignment="Left" Margin="5,13,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="13"/>
+        <Label Content="Lvl" HorizontalAlignment="Left" Margin="187,13,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="13"/>
+        <TextBox x:Name="tb_lvl" HorizontalAlignment="Left" Height="24" Margin="212,14,0,0" TextWrapping="Wrap" Text="90" VerticalAlignment="Top" Width="25"/>
+        <Label Content="Build name" HorizontalAlignment="Left" Margin="300,13,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="13"/>
+        <TextBox x:Name="tb_buildname" HorizontalAlignment="Left" Height="24" Margin="382,15,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="180" SelectionOpacity="1"/>
+        <Label Content="Base ATK" HorizontalAlignment="Left" Margin="10,83,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="13"/>
+        <TextBox x:Name="tb_atkbase" HorizontalAlignment="Left" Height="24" Margin="79,84,0,0" TextWrapping="Wrap" Text="800" VerticalAlignment="Top" Width="60"/>
+        <Label Content="ATK" HorizontalAlignment="Left" Margin="10,113,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="13"/>
+        <TextBox x:Name="tb_atkp" HorizontalAlignment="Left" Height="24" Margin="79,113,0,0" TextWrapping="Wrap" Text="50,0" VerticalAlignment="Top" Width="40"/>
+        <Label Content="Flat ATK" HorizontalAlignment="Left" Margin="10,142,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="13"/>
+        <TextBox x:Name="tb_atkflat" HorizontalAlignment="Left" Height="24" Margin="79,142,0,0" TextWrapping="Wrap" Text="200" VerticalAlignment="Top" Width="60"/>
+        <Label Content="Damage Type" HorizontalAlignment="Left" Margin="154,82,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="13"/>
+        <TextBox x:Name="tb_dt" HorizontalAlignment="Left" Height="24" Margin="250,84,0,0" TextWrapping="Wrap" Text="20,0" VerticalAlignment="Top" Width="60"/>
+        <Label Content="CRIT ch." HorizontalAlignment="Left" Margin="154,113,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="13"/>
+        <TextBox x:Name="tb_critch" HorizontalAlignment="Left" Height="24" Margin="250,114,0,0" TextWrapping="Wrap" Text="20,0" VerticalAlignment="Top" Width="60"/>
+        <Label Content="CRIT DMG" HorizontalAlignment="Left" Margin="154,143,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="13"/>
+        <TextBox x:Name="tb_critdmg" HorizontalAlignment="Left" Height="24" Margin="250,144,0,0" TextWrapping="Wrap" Text="50,0" VerticalAlignment="Top" Width="60"/>
+        <Label Content="Skill" HorizontalAlignment="Left" Margin="429,83,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="13"/>
+        <TextBox x:Name="tb_skill" HorizontalAlignment="Left" Height="24" Margin="468,84,0,0" TextWrapping="Wrap" Text="50,0" VerticalAlignment="Top" Width="40"/>
+        <Label Content="%" HorizontalAlignment="Left" Margin="508,84,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="13"/>
+        <Label Content="%" HorizontalAlignment="Left" Margin="310,114,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="13" RenderTransformOrigin="0.158,0.36"/>
+        <Label Content="%" HorizontalAlignment="Left" Margin="310,144,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="13" RenderTransformOrigin="0.158,0.36"/>
+        <Label Content="%" HorizontalAlignment="Left" Margin="310,84,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="13" RenderTransformOrigin="0.158,0.36"/>
+        <Button x:Name="calc_btn" Content="Button" HorizontalAlignment="Left" Margin="72,330,0,0" VerticalAlignment="Top" Width="75" Click="calc_btn_Click"/>
+        <Label x:Name="calc" Content="Label" HorizontalAlignment="Left" Margin="10,280,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="calc2" Content="Label" HorizontalAlignment="Left" Margin="10,309,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="calc3" Content="Label" HorizontalAlignment="Left" Margin="10,338,0,0" VerticalAlignment="Top"/>
+        <Label Content="%" HorizontalAlignment="Left" Margin="121,114,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="13" RenderTransformOrigin="0.158,0.36"/>
+    </Grid>
+</Page>

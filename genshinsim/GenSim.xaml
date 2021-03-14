@@ -1,0 +1,35 @@
+﻿<Window x:Class="genshinsim.GenSim"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:genshinsim"
+        mc:Ignorable="d"
+        
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        
+        Title="GenSim" Height="420.572" Width="742.371" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None" Loaded="Window_Loaded">
+    <Grid>
+        <Border BorderBrush="#FF00BCD4" BorderThickness="1" HorizontalAlignment="Left" Height="422" VerticalAlignment="Top" Width="742" Margin="0,-1,0,0"/>
+        <materialDesign:ColorZone x:Name="cz" Mode="PrimaryMid" Padding="16" Height="45" MouseDown="cz_MouseDown">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock VerticalAlignment="Center" Margin="36,0,0,0" FontSize="16" FontWeight="Bold"><Run Text="GenSim"/></TextBlock>
+            </StackPanel>
+        </materialDesign:ColorZone>
+        <Grid HorizontalAlignment="Left" Height="376" Margin="0,45,0,0" VerticalAlignment="Top" Width="170">
+            <materialDesign:ColorZone Mode="PrimaryMid" Padding="16" Height="376">
+                <StackPanel Orientation="Vertical" Margin="0,0,0,-6">
+                    <Button x:Name="btn_Main" Content="Main" HorizontalAlignment="Center" Margin="0,0,0,10" Width="138" IsEnabled="False" Click="btn_Main_Click"/>
+                    <Button x:Name="btn_charl" Content="Characters List" HorizontalAlignment="Left" Margin="0,0,0,10" Width="138" Click="btn_charl_Click"/>
+                    <Button x:Name="btn_charc" Content="Character Create" HorizontalAlignment="Center" Margin="0,0,0,10" Width="138" Click="btn_charc_Click"/>
+                    <Button x:Name="btn_dc" Content="" HorizontalAlignment="Center" Margin="0,0,0,10" Width="138" Click="btn_dc_Click" IsEnabled="False"/>
+                    <Button x:Name="btn_Exit" Content="Exit" HorizontalAlignment="Center" Width="138" Margin="0,149,0,0" Click="btn_Exit_Click" Height="32"/>
+                </StackPanel>
+            </materialDesign:ColorZone>
+
+        </Grid>
+        <Frame x:Name="frame" Content="" HorizontalAlignment="Left" Height="376" Margin="170,45,0,0" VerticalAlignment="Top" Width="572" NavigationUIVisibility="Hidden"/>
+        <DockPanel x:Name="dp" HorizontalAlignment="Left" Height="160" LastChildFill="False" Margin="181,56,0,0" VerticalAlignment="Top" Width="550"/>
+        <DockPanel x:Name="dp2" HorizontalAlignment="Left" Height="160" LastChildFill="False" Margin="181,244,0,0" VerticalAlignment="Top" Width="550"/>
+    </Grid>
+</Window>
